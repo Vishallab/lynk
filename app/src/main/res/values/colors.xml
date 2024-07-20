@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <color name="colorPrimary">#192730</color>
+        <color name="colorPrimaryDark">#192730</color>
+        <color name="colorAccent">#487AAF</color>
+
+        <color name="text_primary">#E7F0FF</color>
+        <color name="white">#FFFFFF</color>
+        <color name="black">#000000</color>
+        <color name="text_secondary">#7289A4</color>
+
+        <color name="main_back">#344F5D</color>
+        <color name="main_back_dark">#273B45</color>
+
+        <color name="blue">#8fd0f0</color>
+        <color name="yellow">#FFF387</color>
+        <color name="green">#80DE94</color>
+
+        <color name="red">#ee4b3a</color>
+        <color name="purple">#cda7fe</color>
+        <color name="pale_red">#ff7173</color>
+        <color name="pink">#ffa7da</color>
+
+
+
+        <color name="colorPrimaryVeryDark">#2D2D2D</color>
+        <color name="colorPrimaryLight">#4B4B4B</color>
+        <color name="colorPrimaryVeryLight">#3C3C3C</color>
+
+        <color name="colorSecondary">#2D2D2D</color>
+
+        <color name="colorGradientStart">#2D2D2D</color>
+        <color name="colorGradientCenter">#2D2D2D</color>
+        <color name="colorGradientEnd">#2D2D2D</color>
+
+        <color name="colorBackground">#EBEBEB</color>
+
+
+
+        <color name="teal_200">#FF03DAC5</color>
+        <color name="teal_700">#FF018786</color>
+        <color name="bg">#050A25</color>
+        <color name="bg_white">#EDEDE8</color>
+        <color name="bg_1">#0e2433</color>
+
+
+    </resources>

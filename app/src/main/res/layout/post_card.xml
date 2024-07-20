@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="#EDEDED"
+    >
+
+
+
+<!--++++++++++++++++++++++++++++++++++++ SHIMMER START +++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+    <!-- Shimmer Placeholder -->
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_layout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/header1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imageCard1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="12dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#DDD2D2">
+
+                <ImageView
+                    android:id="@+id/ivAvatar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_male_avatar"/>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/imageCard1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Vishal Mishra"
+                    android:background="@drawable/shape_background"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvUsername1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="myusername"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/shape_background"
+                    android:textColor="@color/text_primary"
+                    android:layout_centerVertical="true" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvCaption1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="my caption here"
+            android:background="@drawable/shape_background"
+            android:textColor="@color/text_primary"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="12dp"
+            android:elevation="0dp"
+            app:cardBackgroundColor="#A4A8AA"
+            android:outlineSpotShadowColor="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/ivPostImage1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_foreground"
+                android:transitionName="ExampleTransition" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvTimestamp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:text="time and date"
+            android:background="@drawable/shape_background"
+            android:textColor="@color/text_primary"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:padding="2dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <ImageView
+                android:id="@+id/like_icon1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="3dp"
+                android:src="@drawable/ic_heart_outline"
+                android:tint="#9C9C9C" />
+
+            <TextView
+                android:id="@+id/count_likes1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.5K"
+                android:textSize="16sp"
+                android:background="@drawable/shape_background"
+                android:textColor="@color/text_primary"
+                android:layout_marginLeft="6dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/like_icon1"/>
+
+            <ImageView
+                android:id="@+id/comment_icon1"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_comment"
+                android:layout_toRightOf="@id/count_likes1"
+                android:layout_marginLeft="25dp"
+                android:padding="3dp"
+                app:tint="#929A94" />
+
+            <TextView
+                android:id="@+id/count_comments1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="527"
+                android:textSize="16sp"
+                android:background="@drawable/shape_background"
+                android:textColor="@color/text_primary"
+                android:layout_marginLeft="6dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/comment_icon1"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+<!--+++++++++++++++++++++++++++++ SHIMMER END ++++++++++++++++++++++++++++++++++++++++-->
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/post_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imageCard"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="12dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                app:cardElevation="0dp"
+                >
+
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:transitionName="@string/side_sheet_behavior"
+                    android:src="@drawable/ic_launcher_foreground"/>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/imageCard"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Vishal Mishra"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="myusername"
+                    android:textStyle="italic"
+                    android:layout_centerVertical="true" />
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnMoreOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/three_dots"
+                android:tint="@color/black"
+                android:background="#EDEDED"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvCaption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="my caption here"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="12dp"
+            android:elevation="0dp"
+            app:cardBackgroundColor="#E3E4E4"
+            android:outlineSpotShadowColor="@android:color/transparent">
+
+                <ImageView
+                    android:id="@+id/ivPostImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:transitionName="ExampleTransition" />
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tvTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:text="time and date"
+            />
+
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:padding="2dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <ImageView
+                android:id="@+id/like_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="3dp"
+                android:src="@drawable/ic_heart_outline"
+                android:tint="#FF0000" />
+
+            <TextView
+                android:id="@+id/count_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.5K"
+                android:textSize="16sp"
+                android:layout_marginLeft="6dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/like_icon"/>
+
+            <ImageView
+                android:id="@+id/comment_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_comment"
+                android:layout_toRightOf="@id/count_likes"
+                android:layout_marginLeft="25dp"
+                android:padding="3dp"
+                app:tint="@color/green" />
+
+            <TextView
+                android:id="@+id/count_comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="108"
+                android:textSize="16sp"
+                android:layout_marginLeft="6dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/comment_icon"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

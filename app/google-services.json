@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "390638777204",
+    "project_id": "mysocialapp-3457e",
+    "storage_bucket": "mysocialapp-3457e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390638777204:android:f5a3639e3726aa65ccf221",
+        "android_client_info": {
+          "package_name": "com.vishal.mysocialapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJrRVftehxfiYS7fZpOmJG7kUL5y1YmOg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

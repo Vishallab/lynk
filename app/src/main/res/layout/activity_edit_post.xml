@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    >
+
+    <!-- Close Button -->
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:tint="#FF0000"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Close" />
+
+    <!-- Post Button -->
+    <Button
+        android:id="@+id/btnSave"
+        style="@style/btnStyle"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="update"
+        android:textSize="18dp"
+        android:textColor="@android:color/white"
+        />
+
+    <!-- Avatar -->
+    <de.hdodenhof.circleimageview.CircleImageView
+
+        android:id="@+id/avatarImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/closeButton"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/img_male_avatar"
+        android:contentDescription="Avatar" />
+
+
+    <!-- Placeholder Text -->
+    <EditText
+        android:id="@+id/etCaption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/avatarImageView"
+        android:layout_alignBottom="@id/avatarImageView"
+        android:layout_marginStart="8dp"
+        android:hint="What's on your mind?"
+        android:background="@null"
+        android:padding="8dp"
+        android:textSize="16sp" />
+
+    <!-- Selected Image -->
+    <ImageView
+        android:id="@+id/ivSelectedImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/avatarImageView"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="Selected Image"/>
+
+    <!-- Image Selection Button -->
+    <ImageButton
+        android:id="@+id/btnSelectImage"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="fitCenter"
+        android:tint="#FF5454"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+
+        android:src="@drawable/gallery" />
+
+</RelativeLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/layout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/imageCard"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:cardCornerRadius="12dp"
+                        android:layout_centerVertical="true"
+                        android:transitionName="ExampleTransition1"
+                        android:layout_marginLeft="4dp"
+                        app:cardElevation="0dp"
+                        >
+                        <ImageView
+                            android:id="@+id/ivAvatar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            />
+                    </androidx.cardview.widget.CardView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/name_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20dp"
+                            android:layout_marginLeft="12dp"/>
+                        <TextView
+                            android:id="@+id/tvUsername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_below="@id/layout_1"
+                            android:textColor="#546F8F"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCaption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_below="@id/layout_1"
+                    android:textSize="16dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/ivPostImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="360dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:transitionName="ExampleTransition"
+                    android:layout_below="@id/tvCaption"
+                    android:layout_marginTop="12dp"/>
+
+                <TextView
+                    android:id="@+id/tvTimestamp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#252C33"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@id/ivPostImage"/>
+
+                <RelativeLayout
+                    android:id="@+id/section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:padding="2dp"
+                    android:layout_below="@id/tvTimestamp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/like_icon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_heart_outline"
+                        android:tint="#FF0000"
+                        />
+
+                    <TextView
+                        android:id="@+id/count_likes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Like"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/like_icon"/>
+
+                    <ImageView
+                        android:id="@+id/comment_icon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_comment"
+                        android:layout_toRightOf="@id/count_likes"
+                        android:layout_marginLeft="25dp"
+                        android:padding="3dp"
+                        app:tint="@color/green" />
+
+                    <TextView
+                        android:id="@+id/count_comments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comment"
+                        android:textSize="16dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/comment_icon"/>
+
+
+
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/commentHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Comments"
+                    android:textSize="18dp"
+                    android:layout_below="@id/section"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="12dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="46dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@id/commentHeader"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/etComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+        android:hint="Add a comment"
+        android:layout_weight="1"
+        android:background="@drawable/shape_background"
+        android:padding="8dp" />
+
+    <ImageView
+        android:id="@+id/btnSendComment"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:src="@drawable/send"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"/>
+
+</LinearLayout>
+
+
+
+</RelativeLayout>
